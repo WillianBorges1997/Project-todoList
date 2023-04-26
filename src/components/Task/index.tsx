@@ -1,5 +1,6 @@
 import styles from './task.module.css';
 import buttonDelete from './bin.svg';
+import { Tasks } from '../Tasks'
 
 export function Task() {
     return (

@@ -1,9 +1,28 @@
-
+import { Header } from '../Header';
 import { Task } from '../Task';
 import styles from './tasks.module.css';
 
 
+const list =[
+    {
+    id: 1,
+    title: 'estudar',
+    isComplete: false
+    },
+    {
+        id: 2,
+        title: 'correr',
+        isComplete: false
+    },
+    {
+        id: 3,
+        title: 'dormir',
+        isComplete: false
+        },
+     
+]
 export function Tasks() {
+    
 return(
 <section className={styles.tasks}>
 
@@ -20,8 +39,10 @@ return(
 </header>
 
 <div className={styles.imput}>
-   <Task />
-   <Task />
+    {list.map( Header =>  { 
+        return <Task />
+    })}
+   
 </div>
 </section>
 )
