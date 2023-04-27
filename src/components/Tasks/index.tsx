@@ -42,11 +42,12 @@ export function Tasks() {
     
         <div>
             <p>Tarefas Criadas</p>
-            <span>10</span>
+            <span> {list.length}
+            </span>
         </div>
         <div>
             <p className={styles.colorPurple}>Concluídas</p>
-            <span>2 de 10</span>
+            <span>{list.length}</span>
         </div>
     </header>
     
