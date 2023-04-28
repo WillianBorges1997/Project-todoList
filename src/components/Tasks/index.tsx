@@ -27,7 +27,7 @@ const list = [
 
 ]
 
-const lists = list.filter((list) => list.isComplete);
+const lists = list.filter((list) => list.isComplete);  //busca todas as tarefas que estão com isComplete true
 
 
 export function Tasks() {
@@ -46,7 +46,7 @@ export function Tasks() {
         </div>
         <div>
             <p className={styles.colorPurple}>Concluídas</p>
-            <span> {lists.length}</span>
+            <span> {lists.length}</span>  {/*lists é a const que filtra valores true */}
         </div>
     </header>
     
