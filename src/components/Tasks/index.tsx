@@ -16,12 +16,12 @@ const list = [
     {
         id: 2,
         title: 'correr',
-        isComplete: true
+        isComplete: false
     }, 
     {
         id: 3,
         title: 'dormir',
-        isComplete: true
+        isComplete: false
         },
                                                 
 
