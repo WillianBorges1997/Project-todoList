@@ -3,33 +3,32 @@ import { Task } from '../Task';
 import styles from './tasks.module.css';
 
 
+
 const list = [
 
 
     {
         id: 1,
         title: 'estudar',
-        isComplete: false
+        isComplete: true
     },
    
     {
         id: 2,
         title: 'correr',
-        isComplete: false
+        isComplete: true
     }, 
     {
         id: 3,
         title: 'dormir',
-        isComplete: false
+        isComplete: true
         },
-                                                    
-];
-/*
-const result = list.filter(lists => lists.length > 3);
+                                                
 
-console.log(result);  //resultado 
+]
 
-*/
+const lists = list.filter((list) => list.isComplete);
+
 
 export function Tasks() {
 
@@ -47,12 +46,12 @@ export function Tasks() {
         </div>
         <div>
             <p className={styles.colorPurple}>Concluídas</p>
-            <span>{list.length}</span>
+            <span> {lists.length}</span>
         </div>
     </header>
     
     <div className={styles.imput}>
-        {list.map( Header =>  { 
+        {list.map( task =>  { 
             return <Task />
         })}
        
