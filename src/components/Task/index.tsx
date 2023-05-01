@@ -1,17 +1,23 @@
 import styles from './task.module.css';
 import buttonDelete from './bin.svg';
-import { Tasks } from '../Tasks'
 
-export function Task() {
+interface ITaskProps{
+    id: number;
+    title: string;
+       
+}
+
+export function Task({id,title}: ITaskProps) {
     return (
         <div className={styles.task}>
             <button className={styles.check}>
             <div />
             </button>
+              
+              <p>
+                {title}
+              </p>
 
-            <p>
-            Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
-            </p>
 
             <button className={styles.buttonDelete}>
             <img src={buttonDelete} />
