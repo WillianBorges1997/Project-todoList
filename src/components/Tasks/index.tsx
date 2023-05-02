@@ -30,7 +30,7 @@ const list = [
 
 const listsFilterIsComplete = list.filter((list) => list.isComplete);  //busca todas as tarefas que estão com isComplete true
 
-/*onst column = () => {
+/*const marking = () => {
     if (isCompleted.current.checked) {
       console.log('');
     } else {
