@@ -36,7 +36,9 @@ const listsFilterIsComplete = list.filter((list) => list.isComplete);  //busca t
     } else {
       console.log('');
     }
-  }; */
+  }; 
+  
+  */
 
 export function Tasks() {
 
