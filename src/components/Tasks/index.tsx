@@ -4,23 +4,24 @@ import styles from './tasks.module.css';
 
 
 
+
 const list = [
 
 
     {
         id: 1,
-        title: 'estudar',
+        title: 'Estudar',
         isComplete: true
     },
    
     {
         id: 2,
-        title: 'correr',
+        title: 'Correr',
         isComplete: false
     }, 
     {
         id: 3,
-        title: 'dormir',
+        title: 'Dormir',
         isComplete: false
         },
                                                 
@@ -29,6 +30,13 @@ const list = [
 
 const listsFilterIsComplete = list.filter((list) => list.isComplete);  //busca todas as tarefas que estão com isComplete true
 
+/*onst column = () => {
+    if (isCompleted.current.checked) {
+      console.log('');
+    } else {
+      console.log('');
+    }
+  }; */
 
 export function Tasks() {
 
@@ -49,16 +57,22 @@ export function Tasks() {
             <span> {listsFilterIsComplete.length} de {list.length}</span>  {/*lists é a const que filtra valores true */}
         </div>
     </header>
-    
 
-        <div className={styles.imput}>
+            <div className={styles.imput}>
+
+
+
         {list.map( task =>  { 
             return <Task 
             id={task.id} 
-            title={task.title} />
+            title={task.title}
+            isComplete={task.isComplete} />
         })}
+
        
     </div>
+
+
     </section>
     )
     }

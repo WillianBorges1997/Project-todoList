@@ -4,10 +4,11 @@ import buttonDelete from './bin.svg';
 interface ITaskProps{
     id: number;
     title: string;
+    isComplete: boolean;
        
 }
 
-export function Task({id,title}: ITaskProps) {
+export function Task({id,title,isComplete}: ITaskProps) {
     return (
         <div className={styles.task}>
             <button className={styles.check}>
@@ -16,6 +17,7 @@ export function Task({id,title}: ITaskProps) {
               
               <p>
                 {title}
+                {isComplete}
               </p>
 
 
