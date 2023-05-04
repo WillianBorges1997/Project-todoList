@@ -1,12 +1,13 @@
 import Logo from "../../assets/Logo.svg";
 import layer from '../Tasks/layer.svg'
+import layer1 from '../Tasks/layer1.svg'
 import styles from './header.module.css'
 
 
 export function Header() {
 return ( 
 <header className={styles.header}>
-<img src={Logo} />
+<img src={Logo} /> 
 
 <form className={styles.newOrderClass}>
 <input

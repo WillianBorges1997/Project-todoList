@@ -11,20 +11,21 @@ const list = [
     {
         id: 1,
         title: 'Estudar',
-        isComplete: true
+        isComplete: false
     },
    
     {
         id: 2,
         title: 'Correr',
-        isComplete: false
+        isComplete: true
     }, 
     {
         id: 3,
         title: 'Dormir',
-        isComplete: false
-        },
+        isComplete: true
+    },
                                                 
+
 
 ]
 
@@ -60,7 +61,8 @@ export function Tasks() {
         </div>
     </header>
 
-            <div className={styles.imput}>
+            <div className={styles.imput}
+            >
 
 
 

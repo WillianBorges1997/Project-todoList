@@ -42,3 +42,9 @@
     color: var(--gray-300);
 
 }
+
+.buttonCheck{ /*botão check */
+    background: none;
+    border: none; 
+    color: var(--purple-dark)
+}

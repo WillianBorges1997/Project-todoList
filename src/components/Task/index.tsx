@@ -1,5 +1,6 @@
 import styles from './task.module.css';
 import buttonDelete from './bin.svg';
+import layer1 from '../Tasks/layer1.svg'
 
 interface ITaskProps{
     id: number;
@@ -10,11 +11,11 @@ interface ITaskProps{
 
 export function Task({id,title,isComplete}: ITaskProps) {
     return (
-        <div className={styles.task}>
+        <div className={styles.task}>  
             <button className={styles.check}>
-            <div />
+              {isComplete ? <img src={layer1} /> : <div />}  {/*marca o botão como verificado ou check, cor roxa*/}
+            
             </button>
-              
               <p>
                 {title}
                 {isComplete}
