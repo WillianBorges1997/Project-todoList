@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Header } from "./components/Header";
-import { Tasks } from "./components/Tasks";
+import { Header, Tasks } from "./components/Tasks/index.js";
 
 
 
