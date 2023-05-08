@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Task } from '../Task';
 import styles from './tasks.module.css';
 import Logo from "../../assets/Logo.svg";
@@ -46,17 +47,49 @@ const list = [
 
 const listsFilterIsComplete = list.filter((list) => list.isComplete);  //busca todas as tarefas que estão com isComplete true
 
+const newsfunctions = () => {
+    const [values,setValues] = useState(list); //o list vai iniciar com os valores que já estão nela por padrão
+
+    function onChange(ev:any) {// faz o up date sempre que os valores do formulário mudar
+    const {name,value} = ev.target; // captura o valor atual do input
+    }}
+
 export function Tasks() {
 
-
+function loadContent () {
+   alert("teste") 
+}
     
     return(
-    <section className={styles.tasks}>
+        <>
+        <header className={styles.header}>
+    <img src={Logo} />
+
+    <form className={styles.newOrderClass}>  
+
+
+    <input 
+    name='for12'
+    type='text'
+    placeholder="Adicione uma nova tarefa" 
     
+    />
+
+    <button onClick={loadContent}> Criar
+
+    <img src={layer} /> </button> {/*imagem de + */}
+
+    <span id="content"></span>
+
+    </form>
+    </header>
+
+    <section className={styles.tasks}>
+
     <section className={styles.menu}>
     
         <div>
-            <p>Tarefas Criadas</p>
+            <p>Tarefas Criadas </p>
             <span> {list.length}
             </span>
         </div>
@@ -66,22 +99,26 @@ export function Tasks() {
         </div>
     </section>
 
-            <div className={styles.imput}
+            <div className={styles.imput} 
             >
 
 
-
+        
         {list.map( task =>  { 
             return <Task 
+        
             id={task.id} 
             title={task.title}
             isComplete={task.isComplete} />
+           
         })}
+        
 
        
     </div>
 
 
     </section>
+    </>
     )
     }
